@@ -24,7 +24,7 @@ Link to this file in your GitHub repository:
 
 ## Project objectives
 
-Write your text here.
+The goal of the project is to develop a weather station with 2-axis solar panel tracking using various sensors and servos. Project will be based on Arduino uno board with Atmega328p microcontroler and wtritten in C language.
 
 <a name="hardware"></a>
 
