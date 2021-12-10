@@ -1,2 +1,57 @@
-# Meteo-station
-University project
+# Weather station with 2-axis solar tracking system
+
+### Team members
+
+* Šimon Roubal (responsible for xxx)
+* Jakub Socha (responsible for xxx)
+* Ondřej Ryšavý (responsible for xxx)
+* Petr Medek (responsible for xxx)
+
+Link to this file in your GitHub repository:
+
+[https://github.com/Simon-Roubal/Meteo-station](https://github.com/Simon-Roubal/Meteo-station)
+
+### Table of contents
+
+* [Project objectives](#objectives)
+* [Hardware description](#hardware)
+* [Libraries description](#libs)
+* [Main application](#main)
+* [Video](#video)
+* [References](#references)
+
+<a name="objectives"></a>
+
+## Project objectives
+
+Write your text here.
+
+<a name="hardware"></a>
+
+## Hardware description
+
+Write your text here.
+
+<a name="libs"></a>
+
+## Libraries description
+
+Write your text here.
+
+<a name="main"></a>
+
+## Main application
+
+Write your text here.
+
+<a name="video"></a>
+
+## Video
+
+Write your text here
+
+<a name="references"></a>
+
+## References
+
+1. Write your text here.
