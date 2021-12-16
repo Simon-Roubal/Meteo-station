@@ -5,7 +5,7 @@
 * Šimon Roubal 
 * Petr Medek 
 * Jakub Socha 
-* Ondřej Ryšavý 
+* ONdřej Ryšavý 
 
 
 Link to this file in your GitHub repository:
