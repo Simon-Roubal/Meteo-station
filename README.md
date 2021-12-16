@@ -114,7 +114,7 @@ The value of variable x is the value of pulse width which controls rotation leve
 ### main
 Firstly in the main function there is incitialization of LCD and positioning servos to default position. Then default LCD strings are diplayes and the custom symbols for LCD are loaded to memory and displayed too. Next we configure ADC and interrupts
 
-![flow1](flowcharts/flow1.png)
+![flow1](flowcharts/flow5.png)
 
 ### ISR TIMER1
 IRS for timer one contains only one line which is execuion of ADC conversion on preselected port and is called every 262ms.
@@ -126,17 +126,17 @@ This interrupt rutine for ADC contains switch which serves as multiplex for ADC 
 ### write_temp
 This function correctly displays measured temperature by its value
 
-![flow3](flowcharts/flow3.png)
+![flow3](flowcharts/flow6.png)
 
 ### write_hum
 This function correctly displays measured humidity by its value
 
-![flow4](flowcharts/flow4.png)
+![flow4](flowcharts/flow7.png)
 
 ### calculate_movement_servo_1
 First of two functions for calculating servo movement. Firstly it determines which sensor has the highest light shining on it and if it is located in top or bottom row of sensors. According to that it calculates allowed match toleration of 90% and compares the value of sensor with highest light on it with corresponding sensor in the same row. If it's whitin toleration it proceeds to calculating movement of next servo. If not it tursn servo by 10 degrees if possible. Same goes for all possible combinations.
 
-![flow5](flowcharts/flow5.png)
+![flow5](flowcharts/flow3.png)
 
 ### calculate_movement_servo_2
 This function also get's the highest value, but this time only averaged rows are compared. then it works in simillar way than the previous function.
@@ -146,12 +146,12 @@ This function also get's the highest value, but this time only averaged rows are
 ### move_to_night_pos
 Function that moves second servo to starting position to be ready for next day while keeping same postion for servo 1.
 
-![flow7](flowcharts/flow7.png)
+![flow7](flowcharts/flow8.png)
 
 ### default_servo_pos
 Moves the solar pannel to default position.
 
-![flow8](flowcharts/flow8.png)
+![flow8](flowcharts/flow1.png)
 
 <a name="video"></a>
 
