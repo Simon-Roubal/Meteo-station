@@ -1,4 +1,4 @@
-# Weather station with 2-axis solar tracking system_ kokot
+# Weather station with 2-axis solar tracking system
 
 ### Team members
 
