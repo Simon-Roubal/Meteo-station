@@ -79,6 +79,7 @@ void servo_move_plus_ninety(volatile uint8_t *reg_name, volatile uint8_t *port_n
 	_delay_us(y);
 }
 ```
+The value of variable x is the value of pulse width 
 
 <a name="main"></a>
 
@@ -87,67 +88,6 @@ void servo_move_plus_ninety(volatile uint8_t *reg_name, volatile uint8_t *port_n
 ![flow1](flowcharts/flow1.png)
 ![flow2](flowcharts/flow2.png)
 
-The core of the code:
-```c
-int main(void)
-{
-    // Initialize LCD display
-    lcd_init(LCD_DISP_ON);
-
-    // Put servos to default position
-    default_servo_pos ();
-
-    // Put default strings
-    lcd_gotoxy(0, 0);
-    lcd_puts("Temp: 00.0 C");
-    lcd_gotoxy(0, 1);
-    lcd_puts("Hum: 00.0");
-
-    // Set pointer to beginning of CGRAM memory
-    lcd_command(1 << LCD_CGRAM);
-    for (uint8_t i = 0; i < 56; i++)
-    {
-        // Store all new chars to memory line by line
-        lcd_data(customChar[i]);
-    }
-    // Set DDRAM address
-    lcd_command(1 << LCD_DDRAM);
-
-    // Display custom chars
-    lcd_gotoxy(10,0);
-    lcd_putc(0);
-    lcd_gotoxy(9,1);
-    lcd_putc(1);
-
-    // Configure ADC to convert PC0[A0] analog value
-    // Set input channel to ADC0
-    ADMUX=0xC0;
-    // Enable ADC module
-    ADCSRA|=(1<<ADEN);
-    // Enable conversion complete interrupt
-    ADCSRA|=(1<<ADIE);
-    // Set clock prescaler to 128
-    ADCSRA|=(1<<ADPS0)|(1<<ADPS1)|(1<<ADPS2);
-
-
-    // Configure timers and interrupts
-    TIM1_overflow_262ms();
-    TIM1_overflow_interrupt_enable();
-
-    // Enables interrupts by setting the global interrupt mask
-    sei();
-
-    // Infinite loop
-    while (1)
-    {
-        /* Empty loop. All subsequent operations are performed exclusively 
-         * inside interrupt service routines ISRs */
-    }
-
-    // Will never reach this
-    return 0;
-}
-```
 
 <a name="video"></a>
 
