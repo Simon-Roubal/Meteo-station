@@ -66,7 +66,7 @@ Two of the libraries were used for DE2 laboratory lessons:
 | timer | Timer library for AVR-GCC we made during laboratories |
 | pwm_servo | Our library for controling PWM servos |
 
-We had to make a separate PWM servo library with funcion for each position, bacaouse compiler will accept implut for ```_delay_ms()``` as a constant. So we solved the problem this way.
+We had to make a separate PWM servo library with funcion for each position, bacause compiler will accept implut for ```_delay_ms()``` as a constant. So we solved the problem this way.
 
 ### pwm_servo.h functions
 | **Function** | **Description** |
