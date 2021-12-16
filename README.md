@@ -31,7 +31,7 @@ The goal of the project is to develop a weather station with 2-axis solar panel 
 
 ## Hardware description
 
-Základem celého hardwaru je Arduino UNO s osazeným čipem ATMEGA328P. K němu jsou následně připojeny 3 typy sensorů. Čidlo pro měření teploty [TMP36](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf), snímač vlhkosti [HIH5030](https://sensing.honeywell.com/honeywell-sensing-hih5030-5031-series-product-sheet-009050-2-en.pdf) a 4ks [fotorezistorů](https://dratek.cz/arduino/1073-fotorezistor-5mm-gl5539.html). Dále se zde nachází 2 servo motory, které slouží v kombinaci s fotorezistory k natáčení solárního panelu. K zobrazení údajů o venkovní teplotě a vlhkosti je k Arduinu připojen LCD displej LM016L. 
+Základem celého hardwaru je Arduino UNO s osazeným čipem ATMEGA328P. K němu jsou následně připojeny 3 typy sensorů. Čidlo pro měření teploty [TMP36](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf), snímač vlhkosti [HIH5030](https://sensing.honeywell.com/honeywell-sensing-hih5030-5031-series-product-sheet-009050-2-en.pdf) a 4ks [fotorezistorů](https://dratek.cz/arduino/1073-fotorezistor-5mm-gl5539.html). Dále se zde nachází 2 servo motory, které slouží v kombinaci s fotorezistory k natáčení solárního panelu. K zobrazení údajů o venkovní teplotě a vlhkosti je k Arduinu připojen [LCD displej LM016L](https://www.datasheet-pdf.info/entry/LM016L). 
 
 ![your figure]()
 
@@ -43,6 +43,7 @@ Funkce natáčení FV panelu, funguje na principu 4 fotoprvků (v našem přípa
 Fotorezistory jsou zapojeny do napěťového děliče. 
 Výstupní napětí tohoto děliče nám určuje intenzitu osvětlení fotorezistoru. 
 Pokud se napětí, s určitou odchylkou, shoduje na všech čtyřech děličích, potom je panel natočen směrem ke slunci.
+
 Podmínka pro prvotní instalaci: Při prvotní instalaci musí uživatel natočit panel směrem ke slunci.
 
 V rámci simulace byli vašak fotoodpory nahrazeny potenciometry.
@@ -56,7 +57,29 @@ Video with princip of solar sensor: [https://www.youtube.com/watch?v=_6QIutZfsFs
 
 ## Libraries description
 
-Write your text here.
+Most of the libraries was used for DE2 laboratory lessons:
+ - uart
+ - twi
+ - gpio
+ - lcd 
+ - timer
+
+Then here is one library made for spinning PWM servo motors. Functions in this library will say to servo motor to which angle it has to move. It includes 19 functions for angles from -90° to +90°. 
+
+Example for function for +90°:
+```c
+void servo_move_plus_ninety(volatile uint8_t *reg_name, volatile uint8_t *port_name, uint8_t pin_num)
+{
+	uint16_t x = 1250;
+	uint16_t y = 20000-x;
+	*reg_name = *reg_name | (1<<pin_num);
+	*port_name = *port_name & ~(1<<pin_num);
+	*port_name = *port_name |(1<<pin_num);
+	_delay_us(x);
+	*port_name = *port_name & ~(1<<pin_num);
+	_delay_us(y);
+}
+```
 
 <a name="main"></a>
 
