@@ -71,7 +71,7 @@ Example of function for +90°:
 void servo_move_plus_ninety(volatile uint8_t *reg_name, volatile uint8_t *port_name, uint8_t pin_num)
 {
 	uint16_t x = 1250;                         //pulse width 
-	uint16_t y = 20000-x;                      //lenght of period minus pulse width 
+	uint16_t y = 20000-x;                      //the difference between the period and the pulse width
 	*reg_name = *reg_name | (1<<pin_num);
 	*port_name = *port_name & ~(1<<pin_num);
 	*port_name = *port_name |(1<<pin_num);
