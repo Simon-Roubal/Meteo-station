@@ -111,10 +111,32 @@ The value of variable x is the value of pulse width which controls rotation leve
 <a name="main"></a>
 
 ## Main application
-
+### main
+Firstly in the main function there is incitialization of LCD and positioning servos to default position. Then default LCD strings are diplayes and the custom symbols for LCD are loaded to memory and displayed too. Next we configure ADC and interrupts
 ![flow1](flowcharts/flow1.png)
+### ISR TIMER1
+IRS for timer one contains only one line which is execuion of ADC conversion on preselected port and is called every 262ms.
+### ISR ADC
+This interrupt rutine for ADC contains switch which serves as multiplex for ADC pins. So each time function is called it reads different ADC pin shifted by one from previous. In cases for thermal and humidity sensors there is conversion to desired unit and calling of appropriate function for displaying on LCD. In cases for photoresistors there is allways ADC value converted to voltage and saved to static variable. In last photoresistor case there is also a conditon for deciding if there is enough light to calculate servo movements of to go to night position and be ready for next day.
 ![flow2](flowcharts/flow2.png)
-
+### write_temp
+This function correctly displays measured temperature by its value
+![flow3]()
+### write_hum
+This function correctly displays measured humidity by its value
+![flow4]()
+### calculate_movement_servo_1
+First of two functions for calculating servo movement. Firstly it determines which sensor has the highest light shining on it and if it is located in top or bottom row of sensors. According to that it calculates allowed match toleration of 90% and compares the value of sensor with highest light on it with corresponding sensor in the same row. If it's whitin toleration it proceeds to calculating movement of next servo. If not it tursn servo by 10 degrees if possible. Same goes for all possible combinations.
+![flow5]()
+### calculate_movement_servo_2
+This function also get's the highest value, but this time only averaged rows are compared. then it works in simillar way than the previous function.
+![flow6]()
+### move_to_night_pos
+Function that moves second servo to starting position to be ready for next day while keeping same postion for servo 1.
+![flow7]()
+### default_servo_pos
+Moves the solar pannel to default position.
+![flow8]()
 
 <a name="video"></a>
 
