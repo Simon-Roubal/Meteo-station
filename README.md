@@ -57,11 +57,9 @@ Principle of solar sensor in practice: [https://www.youtube.com/watch?v=_6QIutZf
 
 ## Libraries description
 
-Most of the libraries were used for DE2 laboratory lessons:
+Two of the libraries were used for DE2 laboratory lessons:
 [https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/library](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/library)
- - uart
- - twi
- - gpio
+
  - lcd 
  - timer
 
