@@ -126,32 +126,32 @@ This interrupt rutine for ADC contains switch which serves as multiplex for ADC 
 ### write_temp
 This function correctly displays measured temperature by its value
 
-![flow3]()
+![flow3](flowcharts/flow3.png)
 
 ### write_hum
 This function correctly displays measured humidity by its value
 
-![flow4]()
+![flow4](flowcharts/flow4.png)
 
 ### calculate_movement_servo_1
 First of two functions for calculating servo movement. Firstly it determines which sensor has the highest light shining on it and if it is located in top or bottom row of sensors. According to that it calculates allowed match toleration of 90% and compares the value of sensor with highest light on it with corresponding sensor in the same row. If it's whitin toleration it proceeds to calculating movement of next servo. If not it tursn servo by 10 degrees if possible. Same goes for all possible combinations.
 
-![flow5]()
+![flow5](flowcharts/flow5.png)
 
 ### calculate_movement_servo_2
 This function also get's the highest value, but this time only averaged rows are compared. then it works in simillar way than the previous function.
 
-![flow6]()
+![flow6](flowcharts/flow6.png)
 
 ### move_to_night_pos
 Function that moves second servo to starting position to be ready for next day while keeping same postion for servo 1.
 
-![flow7]()
+![flow7](flowcharts/flow7.png)
 
 ### default_servo_pos
 Moves the solar pannel to default position.
 
-![flow8]()
+![flow8](flowcharts/flow8.png)
 
 <a name="video"></a>
 
