@@ -63,8 +63,29 @@ Two of the libraries were used for DE2 laboratory lessons:
  - lcd 
  - timer
 
-
-Then here is one library made for spinning PWM servo motors. Functions in this library will say to the servo motor to which angle it has to move. It includes 19 functions for angles from -90° to +90°. 
+### pwm_servo.h functions
+| **Function** | **Description** |
+| :-- | :-- |
+| ```servo_turn_to_postion``` | Move to position specified by given attribute |
+| ```servo_move_plus_ninety``` | Move to +90°|
+| ```servo_move_plus_eighty``` | Move to +80°|
+| ```servo_move_plus_seventy``` | Move to +70° |
+| ```servo_move_plus_sixty``` | Move to +60°|
+| ```servo_move_plus_fifty``` |  Move to +50°|
+| ```servo_move_plus_fourty``` | Move to +40°|
+| ```servo_move_plus_thirty``` | Move to +30° |
+| ```servo_move_plus_twenty``` | Move to +20°|
+| ```servo_move_plus_ten``` | Move to +10° |
+| ```servo_move_zero``` |Move to 0° |
+| ```servo_move_minus_ten``` | Move to -10° |
+| ```servo_move_minus_twenty``` | Move to -20°|
+| ```servo_move_minus_thirty``` | Move to -30° |
+| ```servo_move_minus_fourty``` | Move to -40°|
+| ```servo_move_mimus_fifty``` | Move to -50° |
+| ```servo_move_minus_sixty``` |Move to -60° |
+| ```servo_move_minus_seventy``` | Move to -70° |
+| ```servo_move_minus_eighty``` | Move to -80°|
+| ```servo_move_minus_ninety``` |Move to -90°  |
 
 Example of function for +90°:
 ```c
