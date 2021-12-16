@@ -47,8 +47,9 @@ In the case of simulation, the photoresistors were replaced by potentiometers.
 
 ![solar sensor](images/solar_sensor.png) 
 
-Video with principle of solar sensor: [https://www.youtube.com/watch?v=_6QIutZfsFs](https://www.youtube.com/watch?v=_6QIutZfsFs)
+Principle of solar sensor in practice: [https://www.youtube.com/watch?v=_6QIutZfsFs](https://www.youtube.com/watch?v=_6QIutZfsFs)
 
+![solar_tracking](images/solar_tracking.png)
 
 <a name="libs"></a>
 
@@ -79,7 +80,7 @@ void servo_move_plus_ninety(volatile uint8_t *reg_name, volatile uint8_t *port_n
 	_delay_us(y);
 }
 ```
-The value of variable x is the value of pulse width 
+The value of variable x is the value of pulse width which controls rotation level.
 
 <a name="main"></a>
 
