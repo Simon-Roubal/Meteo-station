@@ -141,7 +141,7 @@ First of two functions for calculating servo movement. Firstly it determines whi
 ### calculate_movement_servo_2
 This function also get's the highest value, but this time only averaged rows are compared. then it works in simillar way than the previous function.
 
-![flow6](flowcharts/flow6.png)
+![flow6](flowcharts/flow4.png)
 
 ### move_to_night_pos
 Function that moves second servo to starting position to be ready for next day while keeping same postion for servo 1.
