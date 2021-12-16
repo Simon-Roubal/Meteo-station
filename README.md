@@ -103,10 +103,15 @@ Write your text here
 ## References
 
 libraries: [https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/library](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/library)
+
 TMP36: [https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf)
+
 HIH5030: [https://sensing.honeywell.com/honeywell-sensing-hih5030-5031-series-product-sheet-009050-2-en.pdf](https://sensing.honeywell.com/honeywell-sensing-hih5030-5031-series-product-sheet-009050-2-en.pdf)
+
 photoresistors: [https://dratek.cz/arduino/1073-fotorezistor-5mm-gl5539.html](https://dratek.cz/arduino/1073-fotorezistor-5mm-gl5539.html)
+
 LM016L: [https://www.datasheet-pdf.info/entry/LM016L](https://www.datasheet-pdf.info/entry/LM016L)
+
 Principle of solar sensor in practice: [https://www.youtube.com/watch?v=_6QIutZfsFs](https://www.youtube.com/watch?v=_6QIutZfsFs)
 
 <a name="references"></a>
