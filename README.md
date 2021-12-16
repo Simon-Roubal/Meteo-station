@@ -84,8 +84,8 @@ void servo_move_plus_ninety(volatile uint8_t *reg_name, volatile uint8_t *port_n
 
 ## Main application
 
-[flow1](flowcharts/flow1.png)
-[flow2](flowcharts/flow2.png)
+![flow1](flowcharts/flow1.png)
+![flow2](flowcharts/flow2.png)
 
 The core of the code:
 ```c
