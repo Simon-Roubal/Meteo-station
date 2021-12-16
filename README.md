@@ -31,7 +31,7 @@ The goal of the project is to develop a weather station with 2-axis solar panel 
 
 ## Hardware description
 
-![your figure]()
+![meteo](images/meteo.png)
 
 The basic of the whole hardware is the Arduino UNO board with an Atmega328p microcontroller. Three types of sensors are connected to this board. Temperature sensor [TMP36](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf), humidity sensor [HIH5030](https://sensing.honeywell.com/honeywell-sensing-hih5030-5031-series-product-sheet-009050-2-en.pdf) and four pieces of [photoresistors](https://dratek.cz/arduino/1073-fotorezistor-5mm-gl5539.html). There are also two servo motors that serve in combination with photoresistors to move a solar panel and follow the sun. For showing information about temperature and humidity is here LCD display [LM016L](https://www.datasheet-pdf.info/entry/LM016L).
 
@@ -157,7 +157,7 @@ Moves the solar pannel to default position.
 
 ## Video
 
-Write your text here
+[https://youtu.be/tC86hReE_2Q](https://youtu.be/tC86hReE_2Q)
 
 <a name="video"></a>
 
